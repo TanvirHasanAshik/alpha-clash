@@ -15,14 +15,14 @@ function randomCharacter() {
     const randomNumber = Math.round(Math.random() * 25);
     const screenValue = document.getElementById('screen-value');
     screenValue.innerText = characterSplit[randomNumber];
-    addedClass(screenValue.innerText, 'bg-orange-500')
+    addedClass(screenValue.innerText, 'bg-green-500')
 }
 
 // capture current key
 function currentKey(event) {
     const screenValue = document.getElementById('screen-value');
     if (screenValue.innerText === event.key) {
-        removeClass(screenValue.innerText, 'bg-orange-500');
+        removeClass(screenValue.innerText, 'bg-green-500');
         removeClass(screenValue.innerText, 'bg-red-700');
         randomCharacter();
         let score = count('score-count');
@@ -53,9 +53,9 @@ function playAgain() {
     removeClass('playground', 'hidden');
     const screenValue = document.getElementById('screen-value');
 
-    removeClass(screenValue.innerText, 'bg-orange-500');
+    removeClass(screenValue.innerText, 'bg-green-500');
     removeClass(screenValue.innerText, 'bg-red-700');
-    addedClass(screenValue.innerText, 'bg-orange-500');
+    addedClass(screenValue.innerText, 'bg-green-500');
     setValue('score-count', 0);
     setValue('life-count', 5);
 }
